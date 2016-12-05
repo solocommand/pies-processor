@@ -1,0 +1,6 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+as3_modlr_bundle:
+    resource: "@As3ModlrBundle/Resources/config/routing.yml"
