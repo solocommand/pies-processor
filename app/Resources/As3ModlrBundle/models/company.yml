@@ -1,0 +1,27 @@
+company:
+    entity:
+        persistence:
+            key: mongodb
+            db: pies
+            schemata:
+                - { keys: { name: 1 }, options: { unique: true }}
+    attributes:
+        name:
+            type: string
+        brandOwnerDUNS:
+            type: string
+        brandOwnerGLN:
+            type: string
+        brandOwnerVMRSID:
+            type: string
+        brandOwnerAAIAID:
+            type: string
+    relationships:
+        parent:
+            type: one
+            entity: company
+        products:
+            type: many
+            inverse: true
+            field: company
+            entity: product

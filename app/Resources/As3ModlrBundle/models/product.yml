@@ -1,0 +1,12 @@
+product:
+    entity:
+        persistence:
+            key: mongodb
+            db: pies
+    attributes:
+        name:
+            type: string
+    relationships:
+        company:
+            type: one
+            entity: company
